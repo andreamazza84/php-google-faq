@@ -72,7 +72,7 @@ $faqs = [
         height: 100%;
     }
     body{
-        background: #f7f7f7;
+        background: white;
         color: #333;
         font-family: 'Roboto', sans-serif, arial;
     }
@@ -132,18 +132,19 @@ $faqs = [
     .btn.user{
         background-color: purple;
         color: white;
+        font-size: 25px;
     }
     .btn:not(.user):hover{
         background-color: #ddd;
     }
-    ul.flex{
+    ul.top-menu{
         align-items: flex-end;
     }
-    ul > li {
+    ul.top-menu > li {
         list-style: none;
         margin-right: 30px;
     }
-    ul > li > a{
+    ul.top-menu > li > a{
         display: inline-block;
         height: 30px;
         color: #666;
@@ -152,7 +153,7 @@ $faqs = [
         font-family: 'Poppins', arial;
         font-weight: 600;
     }
-    ul > li > a.active{
+    ul.top-menu > li > a.active{
         color: #3367d6;
         border-bottom: 2px solid #3367d6;
     }
@@ -173,6 +174,26 @@ $faqs = [
     p > a{
         text-decoration: none;
         color: #3367d6;
+    }
+    #footer{
+        height: 40px;
+        background: #eee;
+    }
+    #footer .container > ul.bottom-menu{
+        width: 50%;
+        height: 100%;
+        align-items: center;
+    }
+    #footer .container > ul.bottom-menu > li{
+        margin-right: 10px;
+        list-style: none;
+    }
+    #footer .container > ul.bottom-menu > li > a{
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        text-decoration: none;
+        color: #666;
     }
 </style>
 <body>
@@ -195,7 +216,7 @@ $faqs = [
         </div>
         <div id="header-bottom">
             <nav id="navbar">
-                <ul class="flex">
+                <ul class="top-menu flex">
                     <li><a href="#">Overview</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Terms of Service</a></li>
@@ -220,7 +241,21 @@ $faqs = [
         </div>
     </main>
     <!-- /#main -->
-    
+    <footer id="footer">
+        <div class="container">
+            <ul class="bottom-menu flex">
+                <li><a href="#">Google</a></li>
+                <li>-</li>
+                <li><a href="#">About Google</a></li>
+                <li>-</li>
+                <li><a href="#">Privacy</a></li>
+                <li>-</li>
+                <li><a href="#">Terms</a></li>  
+            </ul>
+
+        </div>
+    </footer>
+    <!-- /#footer -->
 </body>
 </html>
 
