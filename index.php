@@ -54,7 +54,9 @@ $faqs = [
     <!-- Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
     <!-- Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <title>Google FAQ</title>
 </head>
 <style>
@@ -99,9 +101,9 @@ $faqs = [
     }
     #main{
         min-height: 600px;
-        padding-top: 140px;
+        padding-top: 160px;
     }
-    .logo.flex{
+    .logo{
         align-items: flex-end;
     }
     .logo > img{
@@ -110,21 +112,43 @@ $faqs = [
     .logo > h3{
         font-size: 20px;
         font-weight: 500;
-        color: #555;
+        color: #666;
+    }
+    .options > .more {
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 25px;
+        margin-left: 10px;
+        color: #666;
+        cursor: pointer;
+    }
+    .btn.user{
+        background-color: purple;
+        color: white;
+    }
+    .btn:not(.user):hover{
+        background-color: #ddd;
     }
     ul.flex{
         align-items: flex-end;
     }
     ul > li {
         list-style: none;
-        margin-right: 20px;
+        margin-right: 30px;
     }
     ul > li > a{
         display: inline-block;
         height: 30px;
-        color: #555;
+        color: #666;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 14px;
         font-family: 'Poppins', arial;
         font-weight: 600;
     }
@@ -135,11 +159,13 @@ $faqs = [
     h2{
         font-family: 'Poppins', arial;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 22px;
         padding: 30px 0;
-        color: #555;
+        color: #666;
     }
     p{
+        font-size: 14px;
+        font-weight: 400;
         text-align: justify;
         padding-bottom: 20px;
         line-height: 1.5;
@@ -156,8 +182,15 @@ $faqs = [
                 <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="google logo">
                 <h3>Privacy & Terms</h3>
             </div>
-            <div class="options flex">
-
+            <div class="options">
+                <div class="more flex">
+                    <div class="btn">
+                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <div class="user btn">A</div>
+                </div>
             </div>
         </div>
         <div id="header-bottom">
